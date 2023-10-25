@@ -5,12 +5,14 @@ public class Main {
         EspritTreeSet treeSetList = new EspritTreeSet(new TriNom());
 
         Enseignant e1 = new Enseignant(1,"ens1","preEns1");
-        Enseignant e2 = new Enseignant(2,"ens2","preEns2");
-        Enseignant e3 = new Enseignant(3,"ens3","preEns3");
+        Enseignant e2 = new Enseignant(1,"ens1","preEns1");
+        Enseignant e3 = new Enseignant(2,"ens2","preEns2");
+        Enseignant e4 = new Enseignant(3,"ens3","preEns3");
 
         treeSetList.ajouterEnseignant(e1);
         treeSetList.ajouterEnseignant(e2);
         treeSetList.ajouterEnseignant(e3);
+        treeSetList.ajouterEnseignant(e4);
  treeSetList.displayEnseignants();
 
 
@@ -27,6 +29,7 @@ public class Main {
         hashSetList.ajouterEnseignant(e1);
         hashSetList.ajouterEnseignant(e2);
         hashSetList.ajouterEnseignant(e3);
+        hashSetList.ajouterEnseignant(e4);
         hashSetList.displayEnseignants();
         hashSetList.supprimerEnseignant(e3);
         System.out.println(hashSetList.rechercherEnseignant(e3));

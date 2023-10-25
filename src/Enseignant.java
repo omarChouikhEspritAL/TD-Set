@@ -37,12 +37,21 @@ public class Enseignant implements Comparable<Enseignant>{
 
     @Override
     public boolean equals(Object obj) {
-        return ((Enseignant)obj).getId()==this.getId();
+        if (this==obj) return true;
+        if (obj==null) return false;
+        if (this.getClass()!=obj.getClass()) return false;
+        if (((Enseignant) obj).getId()==this.getId()) return true;
+        return false;
     }
 
     @Override
     public String toString() {
         return "Enseignant{id=" + id +", nom='" + nom + ", pernom='" + pernom +'}';
+    }
+
+    @Override
+    public int hashCode() {
+        return id;
     }
 
     @Override
