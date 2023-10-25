@@ -2,7 +2,7 @@ import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
-        EspritTreeSet treeSetList = new EspritTreeSet();
+        EspritTreeSet treeSetList = new EspritTreeSet(new TriNom());
 
         Enseignant e1 = new Enseignant(1,"ens1","preEns1");
         Enseignant e2 = new Enseignant(2,"ens2","preEns2");
@@ -11,6 +11,9 @@ public class Main {
         treeSetList.ajouterEnseignant(e1);
         treeSetList.ajouterEnseignant(e2);
         treeSetList.ajouterEnseignant(e3);
+ treeSetList.displayEnseignants();
+
+
 
         System.out.println(treeSetList.rechercherEnseignant(1));
         System.out.println(treeSetList.rechercherEnseignant(e2));

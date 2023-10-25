@@ -3,7 +3,13 @@ import java.util.Comparator;
 import java.util.TreeSet;
 
 public class EspritTreeSet implements GestionEnseignant {
-    TreeSet<Enseignant>enseignantTreeSet=new TreeSet<>(Collections.reverseOrder());
+    Comparator comp;
+    public EspritTreeSet(Comparator c) {
+        this.comp = c;
+        enseignantTreeSet= new TreeSet<>(comp);
+    }
+
+    TreeSet<Enseignant>enseignantTreeSet;
     @Override
     public void ajouterEnseignant(Enseignant e) {
         enseignantTreeSet.add(e);
